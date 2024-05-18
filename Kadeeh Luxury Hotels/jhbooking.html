@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jama Hotel Meal Booking</title>
+    <link rel="stylesheet" href="jhbooking.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="logo.jpg" style="height: 90px; width: auto; border-radius: 50%; " alt="">
+        </div>
+        <h1>JAMA HOTEL MEAL BOOKING SYSTEM</h1>
+    </header>
+
+    <main>
+        <section id="tables" class="tables-section">
+            <h2>Available Tables</h2>
+            <div class="table-box" onclick="bookTable(1)">
+                <div class="table">Table 1</div>
+            </div>
+            <div class="table-box" onclick="bookTable(2)">
+                <div class="table">Table 2</div>
+            </div>
+            <div class="table-box" onclick="bookTable(3)">
+                <div class="table">Table 3</div>
+            </div>
+            <div class="table-box" onclick="bookTable(4)">
+                <div class="table">Table 4</div>
+            </div>
+            <div class="table-box" onclick="bookTable(5)">
+                <div class="table">Table 5</div>
+            </div>
+        </section>
+        <section id="food" class="food-section">
+            <h2>Menu</h2>
+            <div class="food-box" onclick="bookFood('beef coquettes', 100.99)">
+                <div class="food">Beef coquettes - $100.99</div>
+            </div>
+            <div class="food-box" onclick="bookFood('sea food plata', 120.99)">
+                <div class="food">sea food plata - $120.99</div>
+            </div>
+            <div class="food-box" onclick="bookFood('steak plata', 80.99)">
+                <div class="food">steak plata - $80.99</div>
+            </div>
+            <div class="food-box" onclick="bookFood('chicken  plata', 60.99)">
+                <div class="food">chicken  plata - $60.99</div>
+            </div>
+            <div class="food-box" onclick="bookFood('sashimi special plata', 90.99)">
+                <div class="food">Chicken Sandwich - $90.99</div>
+            </div>
+        </section>
+        <section id="booking-form" class="booking-form-section">
+            <h2>Book a Meal</h2>
+            <form onsubmit="return false;">
+                <label for="tableNumber">Table Number:</label>
+                <input type="text" id="tableNumber" readonly><br><br><br><br>
+                <label for="meal">Selected Meal:</label>
+                <input type="text" id="selectedMeal" readonly><br><br><br><br>
+                <label for="mealTime">Meal Time:</label>
+        <select id="mealTime" onchange="setMealTime(this.value)">
+            <option value="breakfast">Breakfast</option>
+            <option value="lunch">Lunch</option>
+            <option value="supper">Supper</option>
+        </select><br><br>
+                <button onclick="confirmBooking()">Book Meal</button>
+            </form><br><br><br>
+        </section>
+        <section id="about" class="about-section">
+            <h2>About The Booking System</h2>
+            <p>"Welcome to our hotel's dining experience! Today, we offer five elegantly set tables available for reservation. To secure your table, simply choose from our enticing menu of platas. Each table booking is seamlessly linked to a culinary delight, ensuring a delightful dining experience. Our transparent policies and dedicated support team are here to assist you. Book now for a memorable dining journey at our hotel."</p>
+        </section>
+    </main>
+
+    <footer> 
+        <p>&copy; 2024 Jama Hotel. All rights reserved.</p>
+    </footer>
+    <script src="jhbooking.js"></script>
+</body>
+</html>

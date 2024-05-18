@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jama Hotel Meal Ordering</title>
+    <link rel="stylesheet" href="jhorder.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="logo.jpg" style="height: 90px; width: auto; border-radius: 50%; " alt="">
+        </div>
+        <h1>Jama Hotel Meal Ordering</h1>
+    </header>
+
+    <main>
+        <section id="menu" class="menu-section">
+            <h2>TODAYS MEALS</h2>
+            <div class="food-item" onclick="addToCart('Burger', 10.99)">Burger - $10.99</div>
+            <div class="food-item" onclick="addToCart('Pizza', 12.99)">Pizza - $12.99</div>
+            <div class="food-item" onclick="addToCart('Pasta', 8.99)">Pasta - $8.99</div>
+            <div class="food-item" onclick="addToCart('Salad', 6.99)">Salad - $6.99</div>
+            <div class="food-item" onclick="addToCart('Chicken Sandwich', 9.99)">Chicken Sandwich - $9.99</div>
+            <div class="food-item" onclick="addToCart('Steak', 15.99)">Steak - $15.99</div>
+        </section>
+
+
+        <section id="beverage" class="beverage-section">
+        <h2>TODAYS DRINKS</h2>
+        <div class="beverage-item" onclick="addToCart('tea', 50.99)">tea - $50.99</div>
+        <div class="beverage-item" onclick="addToCart('bone soup', 30.99)">bone soup - $30.99</div>
+        <div class="beverage-item" onclick="addToCart('mango juice', 80.99)">mango juice - $80.99</div>
+        <div class="beverage-item" onclick="addToCart('porriage', 60.99)">porriage - $6.99</div>
+        <div class="beverage-item" onclick="addToCart('sparkling water', 10.99)">sparkling water - $10.99</div>
+        <div class="beverage-item" onclick="addToCart('coffee', 20.99)">coffee - $20.99</div>
+        </section>
+   
+        
+
+        <section id="cart" class="cart-section">
+            <h2>Shopping Cart</h2>
+            <form id="checkout-form">
+                <label for="address">Delivery Address:</label>
+                <input type="text" id="address" name="address" placeholder="Enter your address" required><br><br>
+
+                <label for="delivery-time">Delivery Time:</label>
+                <select id="delivery-time" name="delivery-time" required>
+                    <option value="lunch">Lunch</option>
+                    <option value="supper">Supper</option>
+                    <option value="breakfast">Breakfast</option>
+                </select> 
+            <ul id="cart-items"></ul>
+            <p id="total">Total: $<span id="total-amount">0.00</span></p><br><br><br>
+            <button onclick="checkout()">Checkout</button>
+        </section>
+    </main>
+</body>
+    <footer>
+        <p>&copy; 2024 Jama Hotel. All rights reserved.</p>
+    </footer>
+    <script src="jhorder.js"></script>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="jhlogin.css">
+    <title>Jama Hotel - Login</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.jpg" style="height: 90px; width: auto; border-radius: 50%;" alt="">
+        </div>
+        <h1>Jama Hotel</h1>
+        <p>Your Stay, Your Way, At Our Hotel</p>
+    </header>
+    <main>
+        <section class="box" id="login-box">
+            <div id="loginForm">
+                <div class='message' id="loginError" style="display: none;">
+                    <p>Wrong Username or Password</p>
+                </div>
+                <h2>Login</h2>
+                <form action="#" method="post">
+                    Email: <input type="text" id="loginEmail" required><br><br>
+                    Password: <input type="password" id="loginPassword" required><br><br>
+                    <button type="button" onclick="login()">Login</button>
+                </form><br>
+                <p>Don't have an account? <a href="#" onclick="showRegisterForm()">Register here</a></p>
+            </div>
+
+            <div id="registerForm" style="display: none;">
+               
+                <div class='message' id="registerError" style="display: none;">
+                    <p>This email is already used. Please try another one.</p>
+                </div>
+                
+                <div class='message' id="registerSuccess" style="display: none;">
+                    <p>Registration successful!</p>
+                </div>
+                <h2>Register</h2>
+                <form action="#" method="post">
+                    Email: <input type="email" id="registerEmail" required><br><br>
+                    Contacts: <input type="text" id="registerContacts" required><br><br>
+                    Address: <input type="text" id="registerAddress" required><br><br>
+                    Gender: <select id="registerGender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select><br><br>
+                    Password: <input type="password" id="registerPassword" required><br><br>
+                    <button type="button" onclick="register()">Register</button>
+                </form><br>
+                <p>Already have an account? <a href="#" onclick="showLoginForm()">Login here</a></p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Jama Hotel. All rights reserved.</p>
+    </footer>
+    <script src="jhlogin.js"></script>
+</body>
+</html>

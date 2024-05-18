@@ -1,0 +1,129 @@
+body {
+    background-image: url(dining.jpg);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+section {
+    background: seagreen;
+    width: 20%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5%;
+}
+#menu{
+    background-image: url(chapo.jpg);
+    width: 20%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5%;
+}
+.menu-section{
+    transition: transform 0.3s ease-in-out;
+}
+.menu-section:hover{
+    transform: scale(1.1);
+}
+
+.food-item {
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid grey;
+    background-color: grey;
+
+}
+.food-item:hover{
+    background: #fff;
+}
+#beverage{
+    background-image: url(juice.jpg);
+    width: 20%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5%;
+}
+.beverage-section{
+    transition: transform 0.3s ease-in-out;
+}
+.beverage-section:hover{
+    transform: scale(1.1);
+}
+.beverage-item {
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid grey;
+    background-color: grey;
+    
+ 
+}
+.beverage-item:hover{
+    background: #fff;
+}
+#cart {
+    background-image: url(cart.jpg);
+    text-align: center;
+}
+.cart-section{
+    transition: transform 0.3s ease-in-out;
+}
+.cart-section:hover{
+    transform: scale(1.1);
+}
+
+#cart-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+#cart-items li {
+    margin: 5px;
+}
+
+button {
+    background-color: gray;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #fff;
+}
+@media screen and (max-width: 600px) {
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #menu{
+        width: 50%;
+        margin-bottom: 20px;
+    }
+    #beverage{
+        width: 50%;
+        margin-bottom: 20px;
+    }
+    
+    #cart{
+width: 50%;
+    }
+    
+}
